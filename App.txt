@@ -1,0 +1,35 @@
+Jobly App
+
+App - Jobly
+    NavBar
+        Jobly
+            Home
+        Login
+            UserName
+            Password
+                Logged in
+                    NavBar
+                        Companies
+                            Search
+                            Posts
+                                Job Posting
+                                    Apply
+                                    Applied
+                        Jobs
+                            Search
+                            Job Posts
+                                Apply
+                                Applied
+                        Profile
+                            UserName
+                            First Name
+                            Last Name
+                            Email
+                            Save Changes
+                        Log Out
+    Sign Up
+        UserName
+        First Name
+        Last Name   
+        Email
+            

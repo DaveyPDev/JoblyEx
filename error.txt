@@ -1,0 +1,122 @@
+! <<<-----
+
+//? not sure if this covers all my problems. but currently where its at
+
+//? When downloading the files to start with I've had nothing but issues from the start.
+
+ //? I'm honestly not sure at this point what i'm doing wrong to get the backend api to the Database
+
+ 20231017201006
+ http://localhost:3001/
+
+{
+  "error": {
+    "message": "Not Found",
+    "status": 404
+  }
+}
+
+even before writting any code I had that issue and couldn't get the front end to load or the back end 
+ ! ----->>>
+
+
+
+! <-----      frontend error.    start     ----->
+
+ //? not sure why i can't get switch to work. 
+
+
+Failed to compile.
+
+Attempted import error: 'Switch' is not exported from 'react-router-dom' (imported as 'Switch').
+ERROR in ./src/App.js 20:35-41
+export 'Switch' (imported as 'Switch') was not found in 'react-router-dom' (possible exports: AbortedDeferredError, Await, BrowserRouter, Form, HashRouter, Link, MemoryRouter, NavLink, Navigate, NavigationType, Outlet, Route, Router, RouterProvider, Routes, ScrollRestoration, UNSAFE_DataRouterContext, UNSAFE_DataRouterStateContext, UNSAFE_LocationContext, UNSAFE_NavigationContext, UNSAFE_RouteContext, UNSAFE_ViewTransitionContext, UNSAFE_useRouteId, UNSAFE_useScrollRestoration, createBrowserRouter, createHashRouter, createMemoryRouter, createPath, createRoutesFromChildren, createRoutesFromElements, createSearchParams, defer, generatePath, isRouteErrorResponse, json, matchPath, matchRoutes, parsePath, redirect, redirectDocument, renderMatches, resolvePath, unstable_HistoryRouter, unstable_useBlocker, unstable_usePrompt, unstable_useViewTransitionState, useActionData, useAsyncError, useAsyncValue, useBeforeUnload, useFetcher, useFetchers, useFormAction, useHref, useInRouterContext, useLinkClickHandler, useLoaderData, useLocation, useMatch, useMatches, useNavigate, useNavigation, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRevalidator, useRouteError, useRouteLoaderData, useRoutes, useSearchParams, useSubmit)
+
+ERROR in ./src/components/Companies.js 6:0-40
+Module not found: Error: Can't resolve './CompanyList' in '/Users/windie/Documents/Springboard/SEC/React/react-jobly/frontend/src/components'
+
+ERROR in ./src/components/Companies.js 9:0-89
+Module not found: Error: Can't resolve './Users/windie/Documents/Springboard/SEC/React/react-jobly/api.js' in '/Users/windie/Documents/Springboard/SEC/React/react-jobly/frontend/src/components'
+
+webpack compiled with 3 errors
+
+! <-----      frontend    errors end   ----->
+
+
+
+
+! <-----      back end errors   start   ----->
+
+windie@Davids-MBP backend % npm start
+
+> jobly-solution@2.0.0 start
+> node server.js
+
+Jobly Config:
+SECRET_KEY: ***
+PORT: 3001
+BCRYPT_WORK_FACTOR 12
+Database: jobly
+---
+Started on http://localhost:3001
+node:internal/process/promises:289
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+Error: connect ETIMEDOUT 143.244.220.150:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16) {
+  errno: -60,
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '143.244.220.150',
+  port: 5432
+}
+
+Node.js v20.5.1
+windie@Davids-MBP backend % npm start
+
+> jobly-solution@2.0.0 start
+> node server.js
+
+Jobly Config:
+SECRET_KEY: ***
+PORT: 3001
+BCRYPT_WORK_FACTOR 12
+Database: jobly
+---
+Started on http://localhost:3001
+
+
+
+
+
+
+Error: Not Found                
+    at /Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/app.js:33:15
+    at Layer.handle [as handle_request] (/Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/node_modules/express/lib/router/index.js:280:10)
+    at authenticateJWT (/Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/middleware/auth.js:25:12)
+    at Layer.handle [as handle_request] (/Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Users/windie/Documents/Springboard/SEC/React/react-jobly/backend/node_modules/express/lib/router/index.js:286:9
+GET / 404 46 - 4.238 ms
+node:internal/process/promises:289
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+Error: connect ETIMEDOUT 143.244.220.150:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16) {
+  errno: -60,
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '143.244.220.150',
+  port: 5432
+}
+
+Node.js v20.5.1
+
+
+! <-----      back end errors end     ----->
